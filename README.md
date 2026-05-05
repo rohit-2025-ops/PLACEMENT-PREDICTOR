@@ -16,7 +16,7 @@ A Machine Learning project that predicts whether a student will be <b>Placed</b>
 
 <p>
 This project uses a <b>Machine Learning classification model</b> to predict student placement outcomes.
-It demonstrates how <b>academic performance (CGPA)</b> and <b>aptitude (IQ)</b> influence placement chances.
+It demonstrates how <b>CGPA</b> and <b>IQ</b> influence placement chances.
 </p>
 
 ---
@@ -26,8 +26,9 @@ It demonstrates how <b>academic performance (CGPA)</b> and <b>aptitude (IQ)</b> 
 <ul>
 <li>✅ Predict placement status (Placed / Not Placed)</li>
 <li>✅ Uses IQ and CGPA as input features</li>
-<li>✅ Data visualization with scatter plots</li>
-<li>✅ Simple and beginner-friendly ML model</li>
+<li>✅ Model saved using <b>pickle</b></li>
+<li>✅ Data visualization using scatter plots</li>
+<li>✅ Web app using Flask (app.py)</li>
 </ul>
 
 ---
@@ -37,12 +38,13 @@ It demonstrates how <b>academic performance (CGPA)</b> and <b>aptitude (IQ)</b> 
 <ul>
 <li><b>Algorithm:</b> Logistic Regression</li>
 <li><b>Type:</b> Supervised Learning (Classification)</li>
-<li><b>Libraries Used:</b>
+<li><b>Tools Used:</b>
   <ul>
     <li>NumPy</li>
     <li>Pandas</li>
     <li>Matplotlib</li>
     <li>Scikit-learn</li>
+    <li>Pickle</li>
   </ul>
 </li>
 </ul>
@@ -52,22 +54,36 @@ It demonstrates how <b>academic performance (CGPA)</b> and <b>aptitude (IQ)</b> 
 <h2>📁 Project Structure</h2>
 
 <pre>
-placement-predictor/
+PLACEMENT PROJECT/
 │
-├── data/               # Dataset
-├── model/              # Saved model (optional)
-├── notebooks/          # Jupyter notebooks
-├── app.py              # (Optional) Streamlit/Flask app
-├── main.py             # Main script
-├── requirements.txt    # Dependencies
-└── README.md           # Documentation
+├── templates/                         # HTML templates for Flask
+├── App.py                             # Flask web application
+├── model.pkl                          # Trained ML model
+├── scaler.pkl                         # Feature scaler
+├── placement.csv                      # Original dataset
+├── modified_placement_data.csv        # Processed dataset
+├── PLACEMENT VS IQ.ipynb              # Google Colab / Jupyter notebook
+└── README.md                          # Project documentation
 </pre>
 
 ---
 
-<h2>📈 Dataset</h2>
+<h2>📓 Notebook</h2>
 
-<p>The dataset includes the following features:</p>
+<p>
+The <b>PLACEMENT VS IQ.ipynb</b> notebook contains:
+</p>
+
+<ul>
+<li>Data preprocessing</li>
+<li>Visualization</li>
+<li>Model training</li>
+<li>Evaluation</li>
+</ul>
+
+---
+
+<h2>📈 Dataset</h2>
 
 <ul>
 <li><b>IQ</b></li>
@@ -83,7 +99,19 @@ placement-predictor/
 git clone https://github.com/rohit-2025-ops/placement-predictor.git
 cd placement-predictor
 pip install -r requirements.txt
-python main.py
+python App.py
+</pre>
+
+---
+
+<h2>🌐 Run Web App</h2>
+
+<p>
+After running <b>App.py</b>, open your browser and go to:
+</p>
+
+<pre>
+http://127.0.0.1:5000/
 </pre>
 
 ---
@@ -91,7 +119,7 @@ python main.py
 <h2>📊 Visualization</h2>
 
 <p>
-The project includes scatter plots to visualize how placement depends on IQ and CGPA.
+Scatter plots are used to show the relationship between IQ, CGPA, and placement status.
 </p>
 
 ---
@@ -101,7 +129,7 @@ The project includes scatter plots to visualize how placement depends on IQ and 
 <ul>
 <li>🔹 Add more features (skills, internships, projects)</li>
 <li>🔹 Improve model accuracy</li>
-<li>🔹 Deploy using Streamlit or Flask</li>
+<li>🔹 Deploy the app online</li>
 <li>🔹 Use real-world dataset</li>
 </ul>
 
